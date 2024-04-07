@@ -1,0 +1,25 @@
+<div class="flex flex-col px-16 py-4 shadow-md shadow-gray-400">
+  <div class="bg-slate-400 flex my-2" *ngFor="let data of data">
+    <div class="flex flex-col items-center justify-center container p-2">
+      <div>
+        <img class="rounded-full" src="{{ data.image }}" alt="" />
+      </div>
+      <h1>{{ data.name }}</h1>
+    </div>
+
+    <div class="bg-red-400 w-full grid-cols-3 grid">
+      <div class="flex">
+        <h3>City:</h3>
+        <h4>{{ data.city }}</h4>
+      </div>
+      <div class="flex">
+        <h3>Country</h3>
+        <h4>{{ data.country }}</h4>
+      </div>
+      <div class="flex">
+        <h3>Date of birth:</h3>
+        <h4>{{ data.birthday }}</h4>
+      </div>
+    </div>
+  </div>
+</div>

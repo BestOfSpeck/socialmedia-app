@@ -1,3 +1,46 @@
-<div class="container flex flex-col items-center mt-6">
-  <app-post></app-post>
+<div
+  class="container flex flex-col items-center mt-11"
+  *ngFor="let data of data"
+>
+  <div class="bg-slate-200 rounded-md shadow-md shadow-gray-400">
+    <header class="flex">
+      <div class="flex items-center p-2">
+        <div class="p-4 bg-gray-800 rounded-full">
+          <img src="" alt="" />
+        </div>
+        <h1 class="ml-2 text-lg">Tom Küstermann</h1>
+      </div>
+    </header>
+
+    <section>
+      <div>
+        <img src="{{ data.image }}" alt="" />
+
+        <div class="p-1">
+          <h4 class="mb-0">{{ data.text }}</h4>
+          <h6 class="text-sm text-gray-700 mt-0">{{ data.city }}</h6>
+        </div>
+
+        <div class="p-1">
+          <h3>comments</h3>
+
+          <div class="p-2 flex">
+            <h5 class="text-sm mr-1">Tom Küstermann:</h5>
+            <div class="text-sm">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+              facilis
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <input
+            class="w-full bg-slate-300 text-sm p-1"
+            type="text"
+            placeholder="comment something"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
 </div>

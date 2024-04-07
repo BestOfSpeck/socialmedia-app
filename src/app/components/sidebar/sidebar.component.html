@@ -1,6 +1,54 @@
-<nav class="bg-slate-300 flex flex-col justify-start items-start p-4">
-  <a routerLink="/home" class="mb-2 mt-2">Home</a>
-  <a routerLink="/savedPosts" class="mb-2 mt-2">Saved Posts</a>
-  <a routerLink="/likedPosts" class="mb-2 mt-2">Liked Posts</a>
-  <a routerLink="/followerPosts" class="mb-2 mt-2">Follower Posts</a>
+<nav class="bg-slate-300 flex flex-col justify-start items-start p-2 shadow-md shadow-gray-400">
+  <a
+    routerLink="/home"
+    class="w-full flex items-center justify-between px-2 py-4 my-2 rounded-md hover:bg-slate-400"
+  >
+    <h4 class="text-lg">Home</h4>
+    <div class="p-1">
+      <i class="fi fi-rr-house-blank"></i>
+    </div>
+  </a>
+
+  <a
+    routerLink="/savedPosts"
+    class="w-full flex items-center justify-between px-2 py-4 my-2 rounded-md hover:bg-slate-400"
+  >
+    <h4 class="text-lg">Saved Posts</h4>
+    <div class="p-1">
+      <i class="fi fi-rr-bookmark"></i>
+    </div>
+  </a>
+
+  <a
+    routerLink="/likedPosts"
+    class="w-full flex items-center justify-between px-2 py-4 my-2 rounded-md hover:bg-slate-400"
+  >
+    <h4 class="text-lg">Liked Posts</h4>
+
+    <div class="p1">
+      <i class="fi fi-rr-heart"></i>
+    </div>
+  </a>
+
+  <a
+    routerLink="/followerPosts"
+    class="w-full flex items-center justify-between px-2 py-4 my-2 rounded-md hover:bg-slate-400"
+  >
+    <h4 class="text-lg">Follower Posts</h4>
+
+    <div class="p-1">
+      <i class="fi fi-rr-following"></i>
+    </div>
+  </a>
+
+  <a
+    routerLink="/allUser"
+    class="w-full flex items-center justify-between px-2 py-4 my-2 rounded-md hover:bg-slate-400"
+  >
+    <h4 class="text-lg">See all user</h4>
+
+    <div class="p-1">
+      <i class="fi fi-rr-users-alt"></i>
+    </div>
+  </a>
 </nav>

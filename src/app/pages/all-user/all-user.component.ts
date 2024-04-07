@@ -3,27 +3,27 @@ import { DataService } from '../../data.service';
 import { Observer } from 'rxjs';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrl: './post.component.scss',
+  selector: 'app-all-user',
+  templateUrl: './all-user.component.html',
+  styleUrl: './all-user.component.scss',
 })
-export class PostComponent implements OnInit {
+export class AllUserComponent implements OnInit {
   private url = `https://6612573e95fdb62f24ee7584.mockapi.io/`;
   data: any;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getUsers(this.url + 'posts').subscribe({
+    this.dataService.getUsers(this.url + 'users').subscribe({
       next: (result: any) => {
-        console.log('Data:', result);
         this.data = result;
+        console.log(this.data);
       },
       error: (error) => {
-        console.error('Fehler:', error);
+        console.error(error);
       },
       complete: () => {
-        console.log('Observable finish');
+        console.log('Data is ready');
       },
     } as Observer<any>);
   }

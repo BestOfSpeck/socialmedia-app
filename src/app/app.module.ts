@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,8 +13,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { FollowerPostsComponent } from './pages/follower-posts/follower-posts.component';
 import { LikedPostsComponent } from './pages/liked-posts/liked-posts.component';
 import { SavedPostsComponent } from './pages/saved-posts/saved-posts.component';
-import { PostComponent } from './components/post/post.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AllUserComponent } from './pages/all-user/all-user.component';
 
 @NgModule({
   declarations: [
@@ -23,16 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
     FollowerPostsComponent,
     LikedPostsComponent,
     SavedPostsComponent,
-    PostComponent
+    AllUserComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [provideClientHydration()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
