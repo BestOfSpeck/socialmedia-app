@@ -1,0 +1,11 @@
+header {
+  height: 58px;
+
+  input {
+    outline: none;
+
+    &::placeholder {
+      text-align: center;
+    }
+  }
+}

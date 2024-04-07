@@ -1,0 +1,9 @@
+.page-container {
+  height: calc(100vh - 64px);
+  nav {
+    width: calc(25% - 10px);
+  }
+  section {
+    width: 100%;
+  }
+}
