@@ -2,11 +2,15 @@
   class="container flex flex-col items-center mt-11"
   *ngFor="let data of data"
 >
-  <div class="bg-slate-200 rounded-md shadow-md shadow-gray-400">
+  <div class="bg-slate-200 rounded-md shadow-2xl shadow-zinc-800">
     <header class="flex">
       <div class="flex items-center p-2">
         <div class="bg-gray-800 rounded-full">
-          <img class="w-10 h-10 rounded-full " src="{{ data.user.image }}" alt="" />
+          <img
+            class="w-10 h-10 rounded-full"
+            src="{{ data.user.image }}"
+            alt=""
+          />
         </div>
         <h1 class="ml-2 text-lg">{{ data.user.name }}</h1>
       </div>
