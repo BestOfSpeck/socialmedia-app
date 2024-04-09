@@ -7,17 +7,16 @@ import { FollowerPostsComponent } from './pages/follower-posts/follower-posts.co
 import { AllUserComponent } from './pages/all-user/all-user.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'savedPosts', component: SavedPostsComponent},
-  {path: 'likedPosts', component: LikedPostsComponent},
-  {path: 'followerPosts', component: FollowerPostsComponent},
-  {path: 'allUser', component: AllUserComponent}
-  
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'savedPosts', component: SavedPostsComponent },
+  { path: 'likedPosts', component: LikedPostsComponent },
+  { path: 'followerPosts', component: FollowerPostsComponent },
+  { path: 'allUser', component: AllUserComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -5,20 +5,20 @@
   <div class="bg-slate-200 rounded-md shadow-md shadow-gray-400">
     <header class="flex">
       <div class="flex items-center p-2">
-        <div class="p-4 bg-gray-800 rounded-full">
-          <img src="" alt="" />
+        <div class="bg-gray-800 rounded-full">
+          <img class="w-10 h-10 rounded-full " src="{{ data.user.image }}" alt="" />
         </div>
-        <h1 class="ml-2 text-lg">Tom Küstermann</h1>
+        <h1 class="ml-2 text-lg">{{ data.user.name }}</h1>
       </div>
     </header>
 
     <section>
       <div>
-        <img src="{{ data.image }}" alt="" />
+        <img src="{{ data.post.image }}" alt="" />
 
         <div class="p-1">
-          <h4 class="mb-0">{{ data.text }}</h4>
-          <h6 class="text-sm text-gray-700 mt-0">{{ data.city }}</h6>
+          <h4 class="mb-0">{{ data.post.text }}</h4>
+          <h6 class="text-sm text-gray-700 mt-0">{{ data.post.city }}</h6>
         </div>
 
         <div class="p-1">
