@@ -1,7 +1,12 @@
 nav {
   height: calc(100vh - 64px);
-}
 
-a {
-  transition: all 125ms ease-in-out;
+  a {
+    transition: all 125ms ease-in-out;
+  }
+
+  i {
+    height: 24px;
+    width: 24px;
+  }
 }
