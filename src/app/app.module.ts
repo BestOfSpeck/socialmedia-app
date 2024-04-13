@@ -15,6 +15,7 @@ import { LikedPostsComponent } from './pages/liked-posts/liked-posts.component';
 import { SavedPostsComponent } from './pages/saved-posts/saved-posts.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AllUserComponent } from './pages/all-user/all-user.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AllUserComponent } from './pages/all-user/all-user.component';
     LikedPostsComponent,
     SavedPostsComponent,
     AllUserComponent,
+    CommentsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [provideClientHydration()],

@@ -42,7 +42,6 @@ export class DataService {
   loadPostData() {
     this.getUsers(this.url + 'posts').subscribe({
       next: (result: any) => {
-        console.log('PostData:', result);
         this.postdata = result;
       },
       error: (error) => {
@@ -54,7 +53,6 @@ export class DataService {
   loadUserData() {
     this.getUsers(this.url + 'users').subscribe({
       next: (result: any) => {
-        console.log('UserData:', result);
         this.userdata = result;
       },
       error: (error) => {
