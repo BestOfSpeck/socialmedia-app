@@ -11,6 +11,6 @@ export class CommentsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.postData.id);
+    // console.log(this.postData.id);
   }
 }

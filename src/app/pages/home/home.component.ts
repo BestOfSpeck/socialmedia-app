@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { DataService } from '../../data.service';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { DataService } from '../../services/data/data.service';
+import { FormsModule } from '@angular/forms';
+import { CommentService } from '../../services/comments/comment.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +9,27 @@ import { DataService } from '../../data.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  constructor(private dataService: DataService) {
+  data: any;
+
+  commentInput = '';
+
+  @ViewChild('inputElement', { static: true }) inputElement!: ElementRef;
+  constructor(
+    private dataService: DataService,
+    private commentService: CommentService
+  ) {
     this.dataService.initData();
     this.data = this.dataService.matchedData;
   }
 
-  data: any;
+  submitComment(postIndex: number) {
+    let commentText = this.commentInput;
+
+    this.commentService.comment.push({
+      text: commentText,
+      postIndex: postIndex,
+    });
+
+    this.commentService.saveComment();
+  }
 }
