@@ -1,7 +1,7 @@
 <div>
   <div
     class="container flex flex-col items-center mt-11 snap-center"
-    *ngFor="let data of data"
+    *ngFor="let data of data; let i = index"
   >
     <div class="bg-slate-200 rounded-md shadow-2xl shadow-zinc-800">
       <header class="flex">
@@ -32,12 +32,12 @@
 
           <div class="w-full">
             <input
-              [(ngModel)]="commentInput"
+              [(ngModel)]="commentInput[i]"
               class="w-full bg-slate-300 p-1 h-10 text-lg"
               type="text"
               placeholder="comment something"
             />
-            <button (click)="submitComment(data.post.id)">Submit</button>
+            <button (click)="submitComment(i)">Submit</button>
           </div>
         </div>
       </section>

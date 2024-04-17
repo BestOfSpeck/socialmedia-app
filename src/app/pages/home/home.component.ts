@@ -11,7 +11,7 @@ import { CommentService } from '../../services/comments/comment.service';
 export class HomeComponent {
   data: any;
 
-  commentInput = '';
+  commentInput: string[] = [];
 
   @ViewChild('inputElement', { static: true }) inputElement!: ElementRef;
   constructor(
@@ -20,14 +20,14 @@ export class HomeComponent {
   ) {
     this.dataService.initData();
     this.data = this.dataService.matchedData;
+    console.log(this.data);
   }
 
   submitComment(postIndex: number) {
     let commentText = this.commentInput;
 
-    this.commentService.comment.push({
+    this.data[postIndex].post.comments.push({
       text: commentText,
-      postIndex: postIndex,
     });
 
     this.commentService.saveComment();

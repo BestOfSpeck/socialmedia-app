@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CommentService {
-  comment: any = [];
+  comment: any[] = [];
 
   constructor() {}
 
