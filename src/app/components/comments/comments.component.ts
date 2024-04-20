@@ -8,7 +8,11 @@ import { Component, Input } from '@angular/core';
 export class CommentsComponent {
   @Input() postData: any;
 
+  data: any;
   commentData: any;
 
-  constructor() {}
+  constructor() {
+    this.data = this.postData;
+    console.log(this.data.post.text);
+  }
 }

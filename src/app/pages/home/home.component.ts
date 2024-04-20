@@ -20,7 +20,6 @@ export class HomeComponent {
   ) {
     this.dataService.initData();
     this.data = this.dataService.matchedData;
-    console.log(this.data);
   }
 
   submitComment(postIndex: number) {
